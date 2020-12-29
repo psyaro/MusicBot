@@ -176,7 +176,7 @@ def finalize_logging():
     dlog = logging.getLogger('discord')
     dlh = logging.StreamHandler(stream=sys.stdout)
     dlh.terminator = ''
-    dlh.setFormatter(logging.Formatter('.'))
+    dlh.setFormatter(logging.Formatter('%(levelname)s : %(asctime)s : %(message)s'))
     dlog.addHandler(dlh)
 
 
